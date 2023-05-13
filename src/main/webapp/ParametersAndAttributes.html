@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> Parameters to servlet : 
+</h2>
+<p>
+<ul>
+	<li>- provided by the user in the request</li>
+	<li>- provided by web admin in web.xml</li>
+	<li>- How to get parameters for processing</li>
+	<li>- - String name = request.<b>getParameter</b>("name_Of_parameter");</li>
+</ul>
+
+<h2> <u>Attributes</u> to servlet : 
+</h2>
+<p>
+	<li>- used for transferring information in between the Servlet programs.</li>
+	<li>- in one servlet some objects are attached to session, request, config, context, etc</li>
+	<li>- And other servlet can fetch the object to process logic.</li>
+	<li>- How to perform operation with attributes?</li>
+	<ol>
+	<li>- request.setAttribute(String Name, Object value)</li>
+	<li>- Object value = () request.getAttribtue(String Name)</li>
+	<li>- request.removeAttribute(String Name)</li>
+	</ol>
+<br>
+-------------------------------------
+<br>
+<a href="ParametersAndAttributesDemo.html">link</a> for demo - Handson
+</body>
+</html>

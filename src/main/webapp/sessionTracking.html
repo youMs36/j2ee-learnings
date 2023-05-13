@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+----------------------<br>
+HTTP - Hyper Text Transfer Protocol <br>
+Its a Stateless protocol. 
+- Stateless means, when user sends second request. Server does not know/ tracks the who sent the request. 
+- each request received to server will be treated a new request.
+- EXAMPLE-  first request :: a login Request. if user successfully logins and then again tries to login, 
+- then its expected that server should identify that user has already logged in. 
+- Hence web app developer must track session in servlet.
+this concept is called state management OR session tracking.
+-----------------------------------------------
+What are the session tracking techniques?
+
+1. Cookies
+2. Hidden Form Field
+3. URL Rewriting
+4. HttpSession
+---------------------------------------------------
+
+<h2>Cookie object</h2>
+Cookie is a 
+- a small amount of information sent by a servlet to a Web browser, saved by the browser, and later sent back to the server.
+- The servlet sends cookies to the browser by using the HttpServletResponse#addCookie method
+- Cookies can be retrieved from a request by using the HttpServletRequest#getCookies method. Several cookies might have the same name but different path attributes.
+- How much cookie size is supported by browsers?
+--The browser is expected to support 20 cookies for each Web server, 300 cookies total, and may limit cookie size to 4 KB each.
+- cookie value CAN NOT  have space. Only one string literal is accepted as a cookie value.
+-----------------------------<br>
+<h3> how to use cookies in Servlet? </h3>
+1. Cookie class in package - javax.servlet.http
+2. Server sends cookie in the response object.
+<code>
+Cookie ckObject = new Cookie("key", "value");
+response.addCookie(ckObject);
+</code>
+3. How to read cookies from request object?
+<code>
+Cookies[] ckArray = request.getCookies(); //returns an array.
+if(null == ckArrray)
+{
+	new request for a web server
+}
+else
+{
+	current request is not new. server has already interacted with user from whom the request is received.
+}
+</code>
+<img src="">
+<a href="sessionTrackingDemo.html">link </a>for session tracking Demo
+</body>
+</html>

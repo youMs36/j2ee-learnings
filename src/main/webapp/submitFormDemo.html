@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	.container{
+		width: 40%;
+		border: 1px solid black;
+		margin: auto;
+		padding: 20px;
+		font-size: 20px;
+	}
+	
+	#firstForm table tr td input{
+		font-size: 20px;	
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>My Form</h1>
+		<form id="firstForm" action="registerServlet" method="post">
+			<table>
+				<tr>
+					<td>Enter name:</td>
+					<td><input type="text" name="userName"
+						placeholder="Enter Here" /></td>
+				</tr>
+				<tr>
+					<td>Enter Password</td>
+					<td><input type="password" name="userPassword"
+						placeholder="Enter Here" /></td>
+				</tr>
+				<tr>
+					<td>Enter mailId</td>
+					<td><input type="email" name="userEmail"
+						placeholder="Enter here" /></td>
+				</tr>
+
+				<tr>
+					<td>Select Gender :</td>
+					<td><input type="radio" name="userGender" value="male" />&nbsp;Male&nbsp;
+						<input type="radio" name="userGender" value="female" />&nbsp;Female&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>Select your course</td>
+					<td><select name="userSelectedCourse">
+							<option value="Java">Java</option>
+							<option value="JDBC">JDBC</option>
+							<option value="Servlet & JSP">Servlet & JSP</option>
+							<option value="Spring">Spring</option>
+							<option value="React">React</option>
+							<option value="Python">Python</option>
+							<option value="Android">Android</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td style="text-align: right"><input type="checkbox"
+						value="checked" name="Terms"></td>
+					<td>I Agree Terms and Conditions</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit">Register</button>
+						<button type="reset">Reset</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
