@@ -1,0 +1,4 @@
+
+MySQL - usernmae and pwd -- 
+root 
+India@123
