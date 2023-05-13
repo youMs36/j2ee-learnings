@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+<style type="text/css">
+	.codeBlock{
+		width: 60%;
+		border: 1px solid black;
+		margin: auto;
+		padding: 10px;
+		font-size: 20px;
+	}
+</style>
+</head>
+<body>
+<h1>WelcomeFileList demo.</h1> 
+<br>
+Server by default responds index.html
+to customize this behavior -- meaning to load home.html instead of index.html
+<br>
+<div class="codeBlock">
+
+<code>In web.xml, keep below tags uder &lt;web-app&gt; tag <br>
+ &nbsp;&lt;welcome-file-list&gt;<br>
+ 	&nbsp;&nbsp;&lt;welcome-file&gt;home.html&lt;/welcome-file&gt;<br>
+ 	&nbsp;&nbsp;&lt;welcome-file&gt;default.html&lt;/welcome-file&gt;<br>
+ &nbsp;&lt;/welcome-file-list&gt;<br>
+</code>
+<br> 
+</div>
+<a href="index.html">link to index page</a>
+</body>
+</html>
